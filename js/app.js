@@ -107,6 +107,20 @@ const actualizarTotal = (contenedor) => {
 };
 
 /* --------------------------------- LÓGICA --------------------------------- */
+Swal.fire('Nunca olvides de vacunarte y vacunar a tus hijos')
+Swal.fire({
+	title: 'Vacuna HEXAXIM, en FALTA.',
+	width: 600,
+	padding: '3em',
+	color: '#716add',
+	background: '#fff url(https://sweetalert2.github.io/#examplesimages/trees.png)',
+	backdrop: `
+	  rgba(0,0,123,0.4)
+	  url("https://sweetalert2.github.io/#examplesimages/nyan-cat.gif")
+	  left top
+	  no-repeat
+	`
+  })
 
 mostrarProductos(productos);
 mostrarCarrito();
