@@ -4,6 +4,7 @@ const productos = [
 		nombre: "Adacel",
 		laboratorio: "Sanofi-Pasteur",
 		imagen: "../imagenes/ADACEL (2).jpg",
+		stock:"10",
 		descripcion: "Vacuna de toxoides tetánico y diftérico",
 	},
 	{
@@ -11,7 +12,7 @@ const productos = [
 		nombre: "Menactra",
 		laboratorio:"Sanofi-Pasteur",
 		imagen: "../imagenes/MENACTRA.jpg",
-	
+        stock:"8",	
 		descripcion: "Vacuna Antimeningocóccica contra subgrupos A,C y W-135",
 	},
 	{
@@ -19,6 +20,7 @@ const productos = [
 		nombre: "VACUNAS ANTIGRIPALES TETRAVALENTES",
 		laboratorio: "Cepas 2023 autorizadas por ANMAT",
 		imagen: "../imagenes/ANTIGRIPALES TETRAVALENTES.png",
+		stock:"25",
 	    descripcion: "Vacunas antigripales",
 	},
 	{
@@ -26,15 +28,15 @@ const productos = [
 		nombre: "BUSTRIX ACELULAR",
 		laboratorio: "GSK",
 		imagen: "../imagenes/BUSTRIX ACELULAR.jpg",
-		
-		descripcion: "Vacuna contra Difteria, Tétanos y Pertusis acelular",
+		stock:"3",
+		descripcion: "Vacuna contra Difteria, Tétanos DPT y Pertusis acelular",
 	},
 	{
 		id: "5",
 		nombre: "GAMMATET-T 250",
 		laboratorio: "Gador",
 		imagen: "../imagenes/Gammaglobulina-Antitetánica 250.webp",
-		
+		stock:"18",
 		descripcion: "Gammaglobulina antitetánica 250",
 	},
 	{
@@ -42,7 +44,7 @@ const productos = [
 		nombre: "GARDASIL 9",
 		laboratorio: "MSD",
 		imagen: "../imagenes/Gardasil.jpg",
-		
+		stock:"6",
 		descripcion: "Vacuna nonavalente frente al virus del papiloma humano",
 	},
 	{
@@ -50,15 +52,15 @@ const productos = [
 		nombre: "HEXAXIM",
 		laboratorio: "Sanofi-Pasteur",
 		imagen: "../imagenes/Hexaxim-vacuna.jpg",
-		
-		descripcion: "Vacuna contra Tétanos, Pertusis, Difteria (acelular), Hepatitis B, Haemofilus influenza y Poliomielitis",
+		stock:"0",
+		descripcion: "Vacuna DPT (acelular), Hepatitis B, Haemofilus influenza y Poliomielitis",
 	},
 	{
 		id: "8",
 		nombre: "INFLUVAC",
 		laboratorio: "Abbott",
 		imagen: "../imagenes/vacuna-antigripal TRIVALENTE.jpg",
-		
+		stock:"1",
 		descripcion: "Vacuna Antigripal trivalente",
 	},
 ];

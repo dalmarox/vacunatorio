@@ -17,7 +17,7 @@ const mostrarProductos = (productos) => {
     <h3>${producto.nombre}</h3>
 	<p class="product-laboratorio">${producto.laboratorio}</p>
     <p class="product-description">${producto.descripcion}</p>
-
+    <p class="product-stock">${producto.stock}</p>
     <button id="agregar-${producto.id}" class="add-to-cart">Agregar al carrito</button>
     `;
 		// Agrego la card al contenedor
@@ -72,7 +72,7 @@ const mostrarCarrito = () => {
 				<h3>${producto.nombre}</h3>
 				<p class="product-laboratorio>${producto.laboratorio}</p>
 				<p class="product-description">${producto.descripcion}</p>
-				<p class="product-calendario">${producto.calendario}</p>
+				<p class="product-stock">${producto.stock}</p>
 			</div>
 			<button id="eliminar-${producto.id}" class="remove">Eliminar</button>
 		`;
@@ -101,15 +101,25 @@ const eliminarProducto = (id) => {
 	mostrarCarrito();
 };
 
+/* calcular stock*/
 const actualizarTotal = (contenedor) => {
-	const total = carrito.reduce((acumulador, producto) => acumulador + producto.precio, 0);
-	contenedor.textContent = `Total: $${total}`;
+	const total = carrito.reduce((acumulador, producto) => acumulador - producto.stock, 0);
+	contenedor.textContent = `Total: ${total}`;
 };
+/*Funcion turnos para vacunación*/
+let pedirTurno = 
 
-/* --------------------------------- LÓGICA --------------------------------- */
-Swal.fire('Nunca olvides de vacunarte y vacunar a tus hijos')
+
+/*Librerias*/
+Toastify({
+
+	text: "Pide turno para vacunación",
+	
+	duration: 8000
+	
+	}).showToast();
 Swal.fire({
-	title: 'Vacuna HEXAXIM, en FALTA.',
+	title: 'Nunca te olvides de vacunarte y vacunar a tus hijos.',
 	width: 600,
 	padding: '3em',
 	color: '#716add',
@@ -121,6 +131,6 @@ Swal.fire({
 	  no-repeat
 	`
   })
-
+/*devolver funciones*/
 mostrarProductos(productos);
 mostrarCarrito();
