@@ -88,7 +88,7 @@ const mostrarCarrito = () => {
 		});
 	} else {
 		// Si el carrito está vacío, muestro un texto
-		contenedorCarrito.innerHTML = '<p class="empty">No hay productos</p>';
+		contenedorCarrito.innerHTML = '<p class="empty">"No hay productos"</p>';
 	}
 };
 
@@ -103,7 +103,7 @@ const eliminarProducto = (id) => {
 
 /* calcular stock*/
 const actualizarTotal = (contenedor) => {
-	const total = carrito.reduce((acumulador, producto) => acumulador - producto.stock, 0);
+	const total = carrito.reduce((acumulador) => acumulador-1,0);
 	contenedor.textContent = `Total: ${total}`;
 };
 /*Funcion turnos para vacunación*/
@@ -119,7 +119,7 @@ Toastify({
 	
 	}).showToast();
 Swal.fire({
-	title: 'Nunca te olvides de vacunarte y vacunar a tus hijos.',
+	title: 'Nunca olvides vacunarte y vacunar a tus hijos.',
 	width: 600,
 	padding: '3em',
 	color: '#716add',
@@ -132,5 +132,7 @@ Swal.fire({
 	`
   })
 /*devolver funciones*/
+
+
 mostrarProductos(productos);
 mostrarCarrito();
