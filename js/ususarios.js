@@ -1,3 +1,11 @@
+export let dBusuarios =[
+  {
+  id: 1, 
+  user: "Dalma",
+  pass: "12345",
+  admin: true,
+  },
+];
 
 let id = (id) => document.getElementById(id);
 
@@ -39,8 +47,10 @@ let engine = (id, serial, message) => {
     successIcon[serial].style.opacity = "1";
   }
 };
-//Libreria para mensaje
-(async () => {
+
+JSON.parse(localStorage.getItem("usuarios"))|| localStorage.setItem("usuarios", JSON.stringify(dBusuarios));
+//Libreria para 
+/*(async () => {
 
     const { value: text } = await Swal.fire({
       input: 'textarea',
@@ -56,4 +66,4 @@ let engine = (id, serial, message) => {
       Swal.fire(text)
     }
     
-    })()
+*/

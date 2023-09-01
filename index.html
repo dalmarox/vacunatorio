@@ -1,34 +1,51 @@
 <!DOCTYPE html>
-<html>
-	<head>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<title>FARMA EDUCATIVA</title>
-		
+		<link rel="stylesheet" href="./css/styles.css" />
         
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
-		<link rel="stylesheet" href="./css/styles.css" />
+		
 	</head>
 	<body>
 		<header>
-			<ul class="nav">
-				<li class="nav-item">
-					<a href="./index.html" class="logo">VACUNATORIO DE FARMA EDUCATIVA</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link logo" href="../paginas/contacto.html">Contacto</a>
-				</li>
-			
-			  </ul>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container-fluid">
 
-		</header>
+				  <a class="navbar-brand logo" href="./index.html">
+					<img src="imagenes\yo (2).jpg" alt="yo" width="40" height="40" class="d-inline-block align-text-top">
+					</a>
+					<a class="navbar-brand logo" href="./index.html">VACUNATORIO de FARMA EDUCATIVA</a>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav">
+						  <a class="nav-link active logo" aria-current="page" href="./paginas/contacto.html">Turno para vacunación</a>
+						  <a class="nav-link" href="./paginas/contacto.html"></a>
+						  
+				  </div>
+				 <div id="userLogin" class="nav-item"></div>
+                
+                    <p id="contador__carrito"></p>
+			  </nav>
+			  <div>
+			  <p>Busque su vacuna aquí</p>
+			  <input type="text" id="filter__input">
+			  </div>
+ 		</header>
 
 		
 		<main>
 			<h1>Bienvenidos al vacunatorio </h1>
 			<section>
 				<h2>SELECCIONE LAS VACUNAS </h2>
-				<h3>Puede registrarse y solicitar turno para vacunación y consultas</h3>
+				
+				<h3>Puede registrarse, solicitar turno para vacunación y consultas</h3>
+				
+				<div id="productos"></div>
 				<ul class="product-list">
 					
 				</ul>
@@ -36,6 +53,8 @@
 			<section>
 				<h2>Carrito</h2>
 				<div class="carrito"></div>
+				<p id="contador__carrito"></p>
+				
 			</section>
 		</main>
 
@@ -46,7 +65,13 @@
 		<!-- Scripts -->
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-		<script src="./js/productos.js"></script>
-		<script src="./js/app.js"></script>
+		
+		<script type="module" src="./js/app.js"></script>
+		<script  type="module" src="./js/productos.js"></script>
+		<script type="module" src="./js/turno.js"></script>
+		<script type="module" src="./js/ususarios.js"></script>
+		<script type="module" src="./js/carrito.js"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 	</body>
-</html>
